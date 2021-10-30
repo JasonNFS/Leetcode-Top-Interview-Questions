@@ -6,3 +6,4 @@ macro(add_solution number)
 endmacro()
 
 add_solution(238)
+add_solution(54)

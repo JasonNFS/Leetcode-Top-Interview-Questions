@@ -9,7 +9,7 @@ FetchContent_MakeAvailable(googletest)
 enable_testing()
 include(GoogleTest)
 
-macro(add_problem num)
+macro(add_problem_test num)
     add_executable(
         test_num${num}
         test_num${num}.cpp
@@ -17,7 +17,6 @@ macro(add_problem num)
     target_link_libraries(
         test_num${num}
         gtest_main
-        #        num${num}
     )
     gtest_discover_tests(test_num${num})
 endmacro()
@@ -25,4 +24,5 @@ endmacro()
 include(GoogleTest)
 include_directories(${PROJECT_SOURCE_DIR}/src)
 
-add_problem(238)
+add_problem_test(238)
+add_problem_test(54)
